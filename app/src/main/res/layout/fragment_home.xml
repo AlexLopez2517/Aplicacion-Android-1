@@ -17,7 +17,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="@dimen/cardCornerRadius"
-                app:cardElevation="0dp">
+                app:cardElevation="4dp"
+                android:layout_margin="15dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -26,7 +27,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/altoImageViewHome"
                         android:src="@drawable/banner_platzi_conf"/>
-                    <view
+                    <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:background="@color/colorPrimary"/>
@@ -34,12 +35,26 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/inicio_frag_tv_que_es"
+                        android:textStyle="bold"
                         android:textSize="@dimen/tamanioTitulo"
                         android:textColor="@color/colorPrimaryDark"
                         android:layout_marginRight="@dimen/marginHomeSubtitulo"
                         android:layout_marginLeft="@dimen/marginHomeSubtitulo"
-                        android:layout_marginTop="@dimen/marginHomeSubtitulo">
-                    </TextView>
+                        android:layout_marginTop="@dimen/marginHomeSubtitulo"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/inicio_frag_tv_que_es_resp"
+                        android:textSize="@dimen/tamanioSubtitulo"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginRight="@dimen/marginHomeSubtitulo"
+                        android:layout_marginLeft="@dimen/marginHomeSubtitulo"
+                        android:layout_marginTop="@dimen/marginHomeSubtitulo"/>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
