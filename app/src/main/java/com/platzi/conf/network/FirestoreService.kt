@@ -29,7 +29,7 @@ class FirestoreService {
             }
     }
 
-    fun getSchedule(callback: Callback<List<Conference>>) {
+    fun getSchedule(callback: Callback<List<Speaker>>) {
         firebaseFirestore.collection(CONFERENCES_COLLECTION_NAME)
             .get()
             .addOnSuccessListener { result ->

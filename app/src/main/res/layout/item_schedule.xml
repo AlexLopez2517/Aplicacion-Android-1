@@ -24,7 +24,7 @@
                 android:textColor="@color/colorAccent"
                 android:textStyle="bold"/>
             <TextView
-                android:id="@+id/tvItemSchedule"
+                android:id="@+id/tvItemScheduleAMPM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="A.M."
