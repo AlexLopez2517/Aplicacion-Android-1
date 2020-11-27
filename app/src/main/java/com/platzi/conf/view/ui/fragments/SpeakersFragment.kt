@@ -27,7 +27,7 @@ class SpeakersFragment : Fragment(), SpeakerListener {
         return inflater.inflate(R.layout.fragment_speakers, container, false)
     }
 
-    override fun onCreateView(view: View, savedInstanceState: Bundle?) {
+    fun onCreateView(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel = ViewModelProviders.of(this).get(SpeakerViewModel::class.java)
