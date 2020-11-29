@@ -25,6 +25,7 @@ class ScheduleFragment : Fragment(), ScheduleListener {
     private lateinit var scheduleAdapter: ScheduleAdapter
     private lateinit var viewModel: ScheduleViewModel
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_schedule, container, false)
     }

@@ -8,15 +8,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.CameraUpdateFactory.newLatLngZoom
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.BitmapDescriptor
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.*
 import com.platzi.conf.R
 import com.platzi.conf.model.Ubication
 
@@ -24,7 +22,7 @@ import com.platzi.conf.model.Ubication
  * A simple [Fragment] subclass.
  * create an instance of this fragment.
  */
-class UbicationFragment : Fragment(), OnMapReadyCallback {
+class UbicationFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_ubication, container, false)
     }
@@ -55,6 +53,11 @@ class UbicationFragment : Fragment(), OnMapReadyCallback {
     markerOptions.icon(BitmapDescriptorFactory.fromBitmap(smallMarker))
 
     googleMap?.addMarker(markerOptions)
+    googleMap?.setOnMarkerClickListener(this)
+    }
 
+    override fun onMarkerClick(p0: Marker?): Boolean {
+        findNavController().navigate(R.id.ubicationDetailDialogFragment)
+        return true
     }
 }

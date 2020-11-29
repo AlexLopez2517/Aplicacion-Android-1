@@ -19,7 +19,7 @@ class SpeakersDetailDialogFragment : DialogFragment() {
         return inflater.inflate(R.layout.fragment_speakers_detail_dialog, container, false)
     }
 
-    /*override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         toolbarSpeaker.navigationIcon = ContextCompat.getDrawable(view.context, R.drawable.ic_close)
         toolbarSpeaker.setNavigationOnClickListener {
@@ -32,6 +32,9 @@ class SpeakersDetailDialogFragment : DialogFragment() {
         tvDetailSpeakerName.text = speaker.name
         tvDetailSpeakerWorkplace.text = speaker.jobtitle
         tvDetailSpeakerBiography.text = speaker.biography
-        ivDetailSpeakerImage.im = speaker.image
-    }*/
+    }
+    override fun onStart() {
+        super.onStart()
+        dialog?.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+    }
 }
